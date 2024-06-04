@@ -132,21 +132,6 @@ namespace CRUD_application_2.Controllers
 
             // Redirect to the Index action to display the updated list of users
             return RedirectToAction("Index");
-        }            // This method is responsible for displaying the view to edit an existing user with the specified ID.
-                     // It retrieves the user from the userlist based on the provided ID and passes it to the Edit view.
-
-        // Find the user with the specified ID in the userlist
-        User user = userlist.FirstOrDefault(u => u.Id == id);
-
-            // Check if the user exists
-            if (user == null)
-            {
-                // If no user is found, return a HttpNotFoundResult
-                return HttpNotFound();
+        }
     }
-
-            // Pass the user object to the Edit view
-            return View(user);
-
-}
 }
